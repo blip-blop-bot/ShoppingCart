@@ -3,7 +3,7 @@
     <h2>Product List</h2>
     <div v-for="product in products" :key="product.id">
       <h3>{{ product.name }}</h3>
-      <p>Price: {{ product.price }}</p>
+      <p>Price: ${{ product.price }}</p>
       <button @click="addToCart(product)">Add to Cart</button>
     </div>
   </div>
@@ -14,9 +14,9 @@ export default {
   data() {
     return {
       products: [
-        { id: 1, name: "Product 1", price: 10 },
-        { id: 2, name: "Product 2", price: 20 },
-        { id: 3, name: "Product 3", price: 30 },
+        { id: 1, name: "Tissot", price: 500 },
+        { id: 2, name: "Seiko", price: 1000 },
+        { id: 3, name: "Rolex", price: 10000 },
       ],
     };
   },
@@ -27,3 +27,13 @@ export default {
   },
 };
 </script>
+<style scoped>
+button {
+  color: white;
+  border-radius: 20px;
+  background: blue;
+  padding: 8px 16px;
+  border: 0;
+  cursor: pointer;
+}
+</style>

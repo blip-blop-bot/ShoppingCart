@@ -5,7 +5,7 @@ import Login from "./views/Login.vue";
 import Cart from "./views/Cart.vue";
 
 const routes = [
-  { path: "/Login", name: "login", component: Login },
+  { path: "/Login", name: "login", default: "login", component: Login },
   { path: "/Cart", name: "cart", component: Cart },
 ];
 

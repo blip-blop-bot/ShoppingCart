@@ -7,7 +7,7 @@
   </div>
 
   <router-view> </router-view>
-  <RouterView class="hidden-router-view">
+  <RouterView v-if="$route.name === 'cart'">
     <div id="app">
       <div class="productList">
         <ProductList @add-to-cart="addToCart" />
@@ -63,9 +63,8 @@ export default {
 
 <style scoped>
 .productList {
-  justify-content: center;
+  justify-content: space-evenly;
   display: flex;
-  display: none;
 }
 a {
   margin: 0 20px;
